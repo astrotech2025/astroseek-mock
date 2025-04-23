@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Abilita i CORS per tutte le origini
 
 @app.route("/astroseek", methods=["GET"])
 def get_mock_data():
